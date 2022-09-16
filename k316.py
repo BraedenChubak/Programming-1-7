@@ -115,7 +115,20 @@ class ktools:
 def main():
     """ Karel code goes here! """
     kt = ktools()
-  
+    kt.tl()
+    kt.m2()
+    kt.tr()
+    kt.m3()
+    kt.pick3()
+    kt.tl()
+    kt.m()
+    kt.pick3()
+    kt.tl()
+    kt.m()
+    kt.pick3()
+    kt.tl()
+    kt.m()
+    kt.pick3()
     pass
 
 

@@ -45,14 +45,6 @@ class ktools:
     """pick beeper"""
     pick_beeper()
 
-  def pick3(self):
-    """pick 3 beepers in a line"""
-    self.pick()
-    self.m()
-    self.pick()
-    self.m()
-    self.pick()
-
   def put(self):
     """put beeper"""
     put_beeper()
@@ -70,12 +62,6 @@ class ktools:
     self.put2()
     self.m()
     self.put()
-
-  def put7(self):
-    """put 7 beepers in a line"""
-    self.put5()
-    self.m()
-    self.put2()
 
   def h(self):
     """print letter H using beepers"""
@@ -115,7 +101,31 @@ class ktools:
 def main():
     """ Karel code goes here! """
     kt = ktools()
-  
+    kt.m4()
+    kt.tl()
+    kt.m4()
+    kt.put()
+    kt.tl()
+    kt.m3()
+    kt.tr()
+    kt.m()
+    kt.tr()
+    kt.m3()
+    kt.put()
+    kt.tl()
+    kt.m3()
+    kt.tr()
+    kt.m()
+    kt.tr()
+    kt.m3()
+    kt.put()
+    kt.tl()
+    kt.m3()
+    kt.tr()
+    kt.m()
+    kt.tr()
+    kt.m3()
+    kt.put()
     pass
 
 
