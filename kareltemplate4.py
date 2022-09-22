@@ -5,27 +5,6 @@ class ktools:
     """move"""
     move()
 
-  def m2(self):
-    """moves twice"""
-    self.m()
-    self.m()
-    
-  def m3(self):
-    """moves three times"""
-    self.m2()
-    self.m()
-
-  def m4(self):
-    """moves four times"""
-    self.m2()
-    self.m2()
-
-  def m5(self):
-    """moves five times"""
-    self.m2()
-    self.m2()
-    self.m
-
   def tl(self):
     """turn left"""
     turn_left()
@@ -65,84 +44,84 @@ class ktools:
 
   def put5(self):
     """put 5 beepers in a line"""
-    self.put2()
+    self.putm(2)
     self.m()
-    self.put2()
+    self.putm(2)
     self.m()
     self.put()
 
   def put7(self):
     """put 7 beepers in a line"""
-    self.put5()
+    self.putm(5)
     self.m()
-    self.put2()
+    self.putm(2)
 
   def h(self):
     """print letter H using beepers"""
     self.tl()
-    self.put5()
+    self.putm(5)
     self.tr()
-    self.m3()
+    self.mm(3)
     self.tr()
-    self.put5()
+    self.putm(5)
     self.ta()
-    self.m2()
+    self.mm(2)
     self.tl()
     self.m()
-    self.put2()
+    self.putm(2)
     self.tl()
-    self.m2()
+    self.mm(2)
     self.tl()
-    self.m4()
+    self.mm(4)
 
   def e(self):
     """print letter E using beepers"""
     self.tl()
-    self.put5()
+    self.putm(5)
     self.tr()
     self.m()
-    self.put2()
+    self.putm(2)
     self.tr()
-    self.m2()
+    self.mm(2)
     self.tr()
-    self.put2()
+    self.putm(2)
     self.tl()
-    self.m2()
+    self.mm(2)
     self.tl()
-    self.put2()
-    self.m2()
+    self.putm(2)
+    self.mm(2)
 
   def l(self):
     """print letter L using beepers"""
     self.tl()
-    self.put5()
+    self.putm(5)
     self.ta()
-    self.m4()
+    self.mm(4)
     self.tl()
     self.m()
-    self.put2()
-    self.m2()
+    self.putm(2)
+    self.mm(2)
 
   def o(self):
     """print letter O using beepers"""
     self.tl()
-    self.put5()
+    self.putm(5)
     self.tr()
     self.m()
-    self.put2()
+    self.putm(2)
     self.m()
     self.tr()
-    self.put5()
+    self.putm(5)
     self.tr()
     self.m()
-    self.put2()
+    self.putm(2)
     self.ta()
-    self.m4()
+    self.mm(4)
 
   def b(self):
     """print letter B using beepers"""
     self.tl()
-    self.put5()
+    self.putm(5)
     self.tr()
     self.m()
     self.put()
@@ -150,7 +129,7 @@ class ktools:
     self.tr()
     self.m()
     self.put()
-    self.m2()
+    self.mm(2)
     self.put()
     self.tr()
     self.m()
@@ -158,14 +137,14 @@ class ktools:
     self.m()
     self.put()
     self.ta()
-    self.m2()
+    self.mm(2)
     self.put()
     self.tl()
-    self.m3()
+    self.mm(3)
 
   def r(self):
     self.tl()
-    self.put5()
+    self.putm(5)
     self.tr()
     self.m()
     self.put()
@@ -183,43 +162,43 @@ class ktools:
     self.m()
     self.tr()
     self.m()
-    self.put2()
+    self.putm(2)
     self.tl()
-    self.m2()
+    self.mm(2)
 
   def a(self):
     self.tl()
-    self.put2()
+    self.putm(2)
     self.m()
-    self.put2()
+    self.putm(2)
     self.m()
     self.tr()
     self.m()
     self.put()
     self.tr()
-    self.m2()
+    self.mm(2)
     self.put()
     self.ta()
     self.m()
     self.tr()
     self.m()
     self.tr()
-    self.put2()
+    self.putm(2)
     self.m()
-    self.put2()
+    self.putm(2)
     self.tl()
-    self.m2()
+    self.mm(2)
 
   def d(self):
     self.tl()
-    self.put5()
+    self.putm(5)
     self.tr()
     self.m()
     self.put()
     self.m()
     self.tr()
     self.m()
-    self.put2()
+    self.putm(2)
     self.m()
     self.put()
     self.m()
@@ -227,11 +206,11 @@ class ktools:
     self.m()
     self.put()
     self.ta()
-    self.m3()
+    self.mm(3)
 
   def n(self):
     self.tl()
-    self.put5()
+    self.putm(5)
     self.tr()
     self.m()
     self.tr()
@@ -245,34 +224,22 @@ class ktools:
     self.tl()
     self.m()
     self.tr()
-    self.m2()
+    self.mm(2)
     self.ta()
-    self.put5()
+    self.putm(5)
     self.ta()
-    self.m4()
+    self.mm(4)
     self.tl()
-    self.m2()
+    self.mm(2)
 
   def one(self):
-    """draws 1 using beepers"""
-    self.tr()
-    self.put2()
-    self.m()
-    self.put()
+    """draws number 1 using beepers"""
+    self.tl()
+    self.mm(4)
     self.ta()
-    self.m()
-    self.tr()
-    self.m()
-    self.put2()
-    self.m()
-    self.put2()
+    self.putm(5)
     self.tl()
-    self.m()
-    self.put()
-    self.tl()
-    self.m4()
-    self.tl()
-    self.m4()
+    self.mm(2)
 
   def fic(self) -> bool:
     """Front is Clear"""
@@ -308,12 +275,31 @@ class ktools:
           self.tr
           self.m()
     pass
+
+  def mm(self, num):
+    """move multiple times"""
+    for number in range(0,num):
+      self.m()
+
+  def putm(self,num):
+    """put multiple times"""
+    for i in range(num - 1):
+        self.put()
+        self.m()
+    self.put()
+
+  def pickm(self, num):
+    """pick multiple times"""
+    for _ in range(num - 1):
+        self.pick()
+        self.m()
+    self.pick()
     
 
 def main():
     """ Karel code goes here! """
     kt = ktools()
-
+    
     pass
 
 

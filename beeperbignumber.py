@@ -255,7 +255,6 @@ class ktools:
 
   def one(self):
     """draws 1 using beepers"""
-    self.tr()
     self.put2()
     self.m()
     self.put()
@@ -313,7 +312,9 @@ class ktools:
 def main():
     """ Karel code goes here! """
     kt = ktools()
-
+    kt.one()
+    for num in range(9):
+      kt.o()
     pass
 
 
