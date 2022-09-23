@@ -295,6 +295,19 @@ class ktools:
     """Right is Blocked"""
     return not self.ric()
 
+  def lic(self) -> bool:
+    """Left is Clear"""
+    self.tl()
+    if self.fic():
+      self.tr()
+      return True
+    self.tr()
+    return False
+
+  def lib(self) -> bool:
+    """Left is Blocked"""
+    return not self.lic()
+
   def mazemove(self):
     """Maze Move"""
     if self.fib:

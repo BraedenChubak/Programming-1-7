@@ -262,6 +262,19 @@ class ktools:
     """Right is Blocked"""
     return not self.ric()
 
+  def lic(self) -> bool:
+    """Left is Clear"""
+    self.tl()
+    if self.fic():
+      self.tr()
+      return True
+    self.tr()
+    return False
+
+  def lib(self) -> bool:
+    """Left is Blocked"""
+    return not self.lic()
+
   def mazemove(self):
     """Maze Move"""
     if self.fib:
@@ -282,6 +295,138 @@ class ktools:
       if self.rib():
         if self.lib():
           self.put()
+
+  def thinrcarpet(self):
+    """Thin Room Carpet"""
+    if self.fib():
+      if self.rib():
+        if self.lib():
+          self.put()
+          self.ta()
+          self.m()
+          self.tl()
+          self.m()
+          self.tl()
+          self.m()
+        elif self.lic():
+          self.ta()
+          self.m()
+          self.tl()
+          self.m()
+          self.tl()
+          self.m()
+      elif self.ric():
+        self.ta()
+        self.m()
+        self.tl()
+        self.m()
+        self.tl()
+        self.m()
+    elif self.rib():
+      if self.lib():
+        self.m()
+        if self.fib():
+          if self.rib():
+            if self.lib():
+              self.ta()
+              self.put2()
+              self.m()
+              self.tl()
+              self.m()
+              self.tl()
+              self.m()
+            elif self.lic():
+              self.ta()
+              self.m()
+              self.tl()
+              self.m()
+              self.tl()
+              self.m()
+          elif self.ric():
+            self.ta()
+            self.m()
+            self.tl()
+            self.m()
+            self.tl()
+            self.m()
+        elif self.rib():
+          if self.lib():
+            self.m()
+            if self.fib():
+              if self.rib():
+                if self.lib():
+                  self.ta()
+                  self.putm(3)
+                  self.m()
+                  self.tl()
+                  self.m()
+                  self.tl()
+                  self.m()
+                elif self.lic():
+                  self.ta()
+                  self.mm(3)
+                  self.tl()
+                  self.m()
+                  self.tl()
+                  self.m()
+              elif self.ric():
+                self.ta()
+                self.mm(3)
+                self.tl()
+                self.m()
+                self.tl()
+                self.m()
+            elif self.rib():
+              if self.lib():
+                self.ta()
+                self.mm(3)
+                self.tl()
+                self.m()
+                self.tl()
+                self.m()
+          elif self.lic():
+            self.ta()
+            self.mm(2)
+            self.tl()
+            self.m()
+            self.tl()
+            self.m()
+        elif self.ric():
+          self.ta()
+          self.mm(2)
+          self.tl()
+          self.m()
+          self.tl()
+          self.m()
+      elif self.lic():
+            self.ta()
+            self.mm(2)
+            self.tl()
+            self.m()
+            self.tl()
+            self.m()
+      elif self.ric():
+        self.ta()
+        self.mm(2)
+        self.tl()
+        self.m()
+        self.tl()
+        self.m()
+    elif self.lic():
+      self.ta()
+      self.m()
+      self.tl()
+      self.m()
+      self.tl()
+      self.m()
+    elif self.ric():
+     self.ta()
+     self.m()
+     self.tl()
+     self.m()
+     self.tl()
+     self.m()        
+        
 
   def mm(self, num):
     """move multiple times"""
@@ -306,7 +451,14 @@ class ktools:
 def main():
     """ Karel code goes here! """
     kt = ktools()
-    
+    kt.m()
+    kt.tl()
+    kt.m()
+    for numb in range(8):
+      kt.thinrcarpet()
+    kt.ta()
+    kt.m()
+    kt.tl()
     pass
 
 
