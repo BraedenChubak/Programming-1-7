@@ -334,6 +334,8 @@ class ktools:
               else:
                 self.tr()
             self.m()
+            if self.SOB():
+              break
         if self.lic():
           self.tl()
           self.m()
