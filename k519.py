@@ -1,6 +1,5 @@
 from stanfordkarel import *
 
-
 class ktools:
 
     def m(self):
@@ -345,14 +344,6 @@ class ktools:
             self.tl()
             self.m()
 
-    def rightmaze(self):
-      """Maze for 517"""
-      while not self.SOB():
-        if self.fib():
-          self.tl()
-        else:
-          self.m()
-
     def jump(self):
         """Jump for 510"""
         while self.fic():
@@ -371,35 +362,39 @@ class ktools:
       """treasure hunt for 519"""
       beeper_counter = 0
       treasure = 0
-      while not self.SOB():
-        self.m()
-      while self.SOB():
-        self.pick()
-        beeper_counter += 1
-      if beeper_counter == 1:
-        while not facing_north():
-          self.tl()
-        beeper_counter == 0
-      elif beeper_counter == 2:
-        while not facing_west():
-          self.tl()
-        beeper_counter == 0
-      elif beeper_counter == 3:
-        while not facing_south():
-          self.tl()
-        beeper_counter == 0
-      elif beeper_counter == 4:
-        while not facing_east():
-          self.tl()
-        beeper_counter == 0
-      elif beeper_counter == 5:
-        beeper_counter == 0
-        treasure == 1
-        break
+      while treasure == 0:
+        beeper_counter = 0
+        while not self.SOB():
+          self.m()
+        while self.SOB():
+          self.pick()
+          beeper_counter = beeper_counter + 1
+        if beeper_counter == 1:
+          while not facing_north():
+            self.tl()
+            beeper_counter == 0
+          beeper_counter == 0
+        elif beeper_counter == 2:
+          while not facing_west():
+            self.tl()
+            beeper_counter == 0
+          beeper_counter == 0
+        elif beeper_counter == 3:
+          while not facing_south():
+            self.tl()
+            beeper_counter == 0
+          beeper_counter == 0
+        elif beeper_counter == 4:
+          while not facing_east():
+            self.tl()
+            beeper_counter == 0
+          beeper_counter == 0
+        else:
+          treasure == 1
+          break
+          
         
         
-      
-      
 
     def find(self):
         """find for 515"""
@@ -426,9 +421,7 @@ def main():
     kt.tl()
     kt.m()
     kt.tl()
-    treasure = 0
-    while treasure == 0:
-      kt.treasurehunt()
+    kt.treasurehunt()
     pass
 
 
